@@ -17,7 +17,14 @@
 @section('content')
     <div class="container">
         <div class="row">
+
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div
+              class="fb-like"
+              data-share="true"
+              data-width="450"
+              data-show-faces="true">
+            </div>
                 <article>
                     @if ($post->created_at < $post->updated_at)
                         <div class="row">
