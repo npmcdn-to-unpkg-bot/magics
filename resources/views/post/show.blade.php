@@ -19,7 +19,7 @@
         <div class="row">
 
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-             <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+             <div class="fb-like" data-href="{{route('post.show', $post->slug)}}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true">
                  
              </div>
 
