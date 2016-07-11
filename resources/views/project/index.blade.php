@@ -22,7 +22,7 @@
         <div class="container">
             <div class="row">
                 @foreach ($projects as $project)
-                    <div class="col-md-4 col-sm-6 portfolio-item">
+                    <div class="col-md-4 col-sm-6 portfolio-item box panel panel-default">
                         <a href="#{{$project->slug}}" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
@@ -32,7 +32,7 @@
 
                             <img src="{{ $project->image }}" class="img-responsive" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="user">
                             <h4>
                                 {{ $project->title }}
                             </h4>

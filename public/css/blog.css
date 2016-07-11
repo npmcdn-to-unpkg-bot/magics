@@ -473,8 +473,8 @@ article a {
 
 .portfolio-modal .close-modal {
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 45px;
+  height: 45px;
   background-color: transparent;
   top: 25px;
   right: 25px;
