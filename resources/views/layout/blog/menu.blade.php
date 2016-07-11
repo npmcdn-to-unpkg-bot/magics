@@ -90,7 +90,7 @@
                     @if ($menu->is_category_dropdown)
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                {{ $menu->name }}
+                                CATEGORIAS
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
