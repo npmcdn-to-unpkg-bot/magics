@@ -1,7 +1,7 @@
 @extends('layout.blog.main')
 
-@section('meta-title', 'Portfolio')
-@section('meta-subtitle', 'My work so far')
+@section('meta-title', 'MAGiCS SHOP')
+@section('meta-subtitle', 'Lo que buscas')
 @section('meta-description', 'All my work')
 @section('meta-url', URL::route('portfolio'))
 
@@ -58,17 +58,8 @@
                                     <div class="col-lg-8 col-lg-offset-2">
                                         <div class="modal-body">
                                             <!-- Project Details Go Here -->
-                                            <h2>
-                                                {{ $project->title }}
-
-                                            </h2>
-                                            <p class="item-intro text-muted">
-                                                {{ $project->sub_title }}
-                                                <small>
-                                                    <i class="fa fa-external-link"></i>
-                                                    {!! link_to($project->link, $project->link, ['target'=>'_blank']) !!}
-                                                </small>
-                                            </p>
+                                           
+                                            
 
                                             <div id="Portfolio_Slider{{$project->id}}" class="carousel slide" data-ride="carousel">
                                                 <!-- Indicators -->
