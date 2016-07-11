@@ -73,7 +73,7 @@
                 @endforeach
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                 <ul class="list-inline text-center">
+                 <ul>
                             @foreach ($links as $link)
                                 <li>
                                     <a href="{{ $link->url }}" target="_blank">
