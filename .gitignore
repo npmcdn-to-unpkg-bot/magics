@@ -1,0 +1,5 @@
+.vagrant/
+/vendor
+/node_modules
+composer.lock
+.env
