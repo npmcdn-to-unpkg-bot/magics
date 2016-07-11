@@ -72,8 +72,7 @@
                     @endif
                 @endforeach
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                 <ul>
+            <ul class="list-inline text-center">
                             @foreach ($links as $link)
                                 <li>
                                     <a href="{{ $link->url }}" target="_blank">
@@ -85,6 +84,8 @@
                                 </li>
                             @endforeach
                   </ul>
+            <ul class="nav navbar-nav navbar-right">
+                 
                 @foreach ($menus['right'] as $menu)
                     @if ($menu->is_category_dropdown)
                         <li class="dropdown">
