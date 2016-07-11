@@ -24,13 +24,7 @@
              </div>
 
                 <article>
-                    @if ($post->created_at < $post->updated_at)
-                        <div class="row">
-                            <div class="col-md-12 text-right">
-                                <em><small>This article was last updated on : {{ $post->updated_at->format('M d Y') }}</small></em>
-                            </div>
-                        </div>
-                    @endif
+                    
                     <div class="row">
                         <div class="col-md-12">
                             {!! $post->content !!}
@@ -43,6 +37,13 @@
                             @endforeach
                         </div>
                     </div>
+                    @if ($post->created_at < $post->updated_at)
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <em><small>This article was last updated on : {{ $post->updated_at->format('M d Y') }}</small></em>
+                            </div>
+                        </div>
+                    @endif
                 </article>
 
                 <hr>
