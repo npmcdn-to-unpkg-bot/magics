@@ -80,7 +80,7 @@
                                     <a href="{{ $link->url }}" target="_blank">
                                         <span >
                                             
-                                            <i class="fa {{ $link->icon }} fa-1x fa-inverse"></i>
+                                            <i class="fa {{ $link->icon }} fa-stack-1x fa-inverse"></i>
                                         </span>
                                     </a>
                                 </li>
