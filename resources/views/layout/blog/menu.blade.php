@@ -72,20 +72,20 @@
                     @endif
                 @endforeach
             </ul>
-            <ul class="list-inline text-center">
+
+            <ul class="nav navbar-nav navbar-right">
+                
                             @foreach ($links as $link)
                                 <li>
                                     <a href="{{ $link->url }}" target="_blank">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa {{ $link->icon }} fa-stack-1x fa-inverse"></i>
+                                        <span >
+                                            
+                                            <i class="fa {{ $link->icon }} fa-1x fa-inverse"></i>
                                         </span>
                                     </a>
                                 </li>
                             @endforeach
-                  </ul>
-            <ul class="nav navbar-nav navbar-right">
-                 
+              
                 @foreach ($menus['right'] as $menu)
                     @if ($menu->is_category_dropdown)
                         <li class="dropdown">
