@@ -19,12 +19,10 @@
         <div class="row">
 
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-             <div
-              class="fb-like"
-              data-share="true"
-              data-width="450"
-              data-show-faces="true">
-            </div>
+             <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+                 
+             </div>
+
                 <article>
                     @if ($post->created_at < $post->updated_at)
                         <div class="row">
