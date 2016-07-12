@@ -22,7 +22,7 @@
         <div class="container" class="transitions-enabled" id="pins" >
             <div class="row">
                 @foreach ($projects as $project)
-                    <div class="portfolio-item box panel panel-default">
+                    <div class="portfolio-item box ">
                         <a href="#{{$project->slug}}" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
