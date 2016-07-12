@@ -52,65 +52,59 @@
                       
                         <!-- Modal content-->
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
-                          </div>
+
                           <div class="modal-body">
                             <div id="Portfolio_Slider{{$project->id}}" class="carousel slide" data-ride="carousel">
-                                                <!-- Indicators -->
-                                                <ol class="carousel-indicators">
-                                                    <?php $i=0; ?>
-                                                    @foreach ($project->images as $key => $image)
-                                                        <li data-target="#Portfolio_Slider{{$project->id}}" data-slide-to="{{$key}}" class="@if ($i==0) active @endif"></li>
-                                                        <?php $i++ ?>
-                                                    @endforeach
-                                                </ol>
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <?php $i=0; ?>
+                                    @foreach ($project->images as $key => $image)
+                                        <li data-target="#Portfolio_Slider{{$project->id}}" data-slide-to="{{$key}}" class="@if ($i==0) active @endif"></li>
+                                        <?php $i++ ?>
+                                    @endforeach
+                                </ol>
 
-                                                <!-- Wrapper for slides -->
-                                                <div class="carousel-inner" role="listbox">
-                                                    <?php $i=0; ?>
-                                                    @foreach ($project->images as $key => $image)
-                                                        <div class="item @if ($i==0) active @endif">
-                                                            <?php $i++ ?>
-                                                            <img src="{{$image->image}}" alt="{{$project->title}}">
-                                                        </div>
-                                                    @endforeach
-                                                </div>
-
-                                                <!-- Controls -->
-                                                <a class="left carousel-control" href="#Portfolio_Slider{{$project->id}}" role="button" data-slide="prev">
-                                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                </a>
-                                                <a class="right carousel-control" href="#Portfolio_Slider{{$project->id}}" role="button" data-slide="next">
-                                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                                    <span class="sr-only">Next</span>
-                                                </a>
-                                            </div>
-
-                                            {!! $project->description !!}
-                                            
-                                            <ul class="list-inline">
-                                                <li>Date: {{ date('M Y', strtotime($project->date)) }}</li>
-                                                <li>Client: {{ $project->client }}</li>
-                                                <li>
-                                                    Category:
-                                                    @foreach ($project->categories as $category)
-                                                        {{ $category->name }}<span class="coma">,</span>
-                                                    @endforeach
-                                                </li>
-                                            
-                                            </ul>
-
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <?php $i=0; ?>
+                                    @foreach ($project->images as $key => $image)
+                                        <div class="item @if ($i==0) active @endif">
+                                            <?php $i++ ?>
+                                            <img src="{{$image->image}}" alt="{{$project->title}}">
                                         </div>
-                          </div>
-                          
+                                    @endforeach
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#Portfolio_Slider{{$project->id}}" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#Portfolio_Slider{{$project->id}}" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+                            {!! $project->description !!}
+                            
+                            <ul class="list-inline">
+                                <li>Date: {{ date('M Y', strtotime($project->date)) }}</li>
+                                <li>Client: {{ $project->client }}</li>
+                                <li>
+                                    Category:
+                                    @foreach ($project->categories as $category)
+                                        {{ $category->name }}<span class="coma">,</span>
+                                    @endforeach
+                                </li>
+                            
+                            </ul>
+
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar Ventana </button>
                         </div>
-                        
                       </div>
-                   
+                    </div>
+                  </div>
                 @endforeach
             </div>
 
