@@ -510,8 +510,9 @@ article a {
   display: none; }
 
 .box {
-      
-      width: 350px;
+      padding: 8px;
+      margin: 2px;
+      width: 300px;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
       border-radius: 7px;
       text-align: center;
