@@ -1,63 +1,20 @@
-@extends('layout.blog.main')
-
-@section('meta-title', 'MAGiCS SHOP')
-@section('meta-subtitle', 'Lo que buscas')
-@section('meta-description', 'All my work')
-@section('meta-url', URL::route('portfolio'))
-
-@section('styles')
-    <style>
-        span.coma:last-child {
-            display: none;
-        }
-        .carousel-inner img{
-            width: 100%;
-        }
-    </style>
-@stop
-
-@section('content')
-
-    <section align="center" id="portfolio" class="bg-light-gray">
-        <div class="container" class="transitions-enabled" id="pins" >
-            <div class="row">
-                @foreach ($projects as $project)
-                    <div class="portfolio-item box ">
-                        <a href="#{{$project->slug}}" class="portfolio-link" data-toggle="modal">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
+<div class="portfolio-modal modal fade" id="{{$project->slug}}" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-content">
+                            <div class="close-modal" data-dismiss="modal">
+                                <div class="lr">
+                                    <div class="rl">
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <img src="{{ $project->image }}" class="img-responsive" alt="">
-                            </ol>
-                        </a>
-                        <div class="user">
-                            <h4>
-                                {{ $project->title }}
-                            </h4>
-                            <p class="text-muted">
-                                @foreach ($project->categories as $category)
-                                    {{ $category->name }}<span class="coma">,</span>
-                                @endforeach
-                            </p>
-                        </div>
-                    </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        <div class="modal-body">
+                                            <!-- Project Details Go Here -->
+                                           
+                                            
 
-                    {{-- MODAL --}}
-                     <!-- Modal -->
-                    <div class="modal fade" id="{{$project->slug}}" role="dialog">
-                      <div class="modal-dialog">
-                      
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
-                          </div>
-                          <div class="modal-body">
-                            <div id="Portfolio_Slider{{$project->id}}" class="carousel slide" data-ride="carousel">
+                                            <div id="Portfolio_Slider{{$project->id}}" class="carousel slide" data-ride="carousel">
                                                 <!-- Indicators -->
                                                 <ol class="carousel-indicators">
                                                     <?php $i=0; ?>
@@ -105,28 +62,8 @@
 
                                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                                         </div>
-                          </div>
-                          
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        
-                      </div>
-                   
-                @endforeach
-            </div>
-
-        </div>
-
-    </section>
-
-@stop
-@section('scripts')
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-
-<script>
-$('#pins').masonry({
-  // options
-  itemSelector: '.box',
-  isFitWidth: true
-});
-</script>
-@endsection
+                    </div>
