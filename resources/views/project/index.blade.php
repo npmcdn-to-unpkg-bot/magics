@@ -18,11 +18,11 @@
 
 @section('content')
 
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
+    <section align="center" id="portfolio" class="bg-light-gray">
+        <div class="container" class="transitions-enabled" id="pins">
             <div class="row">
                 @foreach ($projects as $project)
-                    <div class="col-md-4 col-sm-6 portfolio-item box panel panel-default">
+                    <div class="portfolio-item box panel panel-default">
                         <a href="#{{$project->slug}}" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
@@ -104,7 +104,9 @@
                                                         {{ $category->name }}<span class="coma">,</span>
                                                     @endforeach
                                                 </li>
+                                            
                                             </ul>
+
                                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                                         </div>
                                     </div>
@@ -118,3 +120,12 @@
     </section>
 
 @stop
+@section('scripts')
+<script>
+$('#pins').masonry({
+  // options
+  itemSelector: '.box',
+  isFitWidth: true
+});
+</script>
+@endsection
