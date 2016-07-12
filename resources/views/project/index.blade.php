@@ -19,7 +19,7 @@
 @section('content')
 
     <section align="center" id="portfolio" class="bg-light-gray">
-        <div class="container" class="transitions-enabled" id="pins">
+        <div class="container" class="transitions-enabled" id="pins" >
             <div class="row">
                 @foreach ($projects as $project)
                     <div class="portfolio-item box panel panel-default">
@@ -29,8 +29,9 @@
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-
+                            
                             <img src="{{ $project->image }}" class="img-responsive" alt="">
+                            </ol>
                         </a>
                         <div class="user">
                             <h4>
@@ -121,6 +122,8 @@
 
 @stop
 @section('scripts')
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+
 <script>
 $('#pins').masonry({
   // options

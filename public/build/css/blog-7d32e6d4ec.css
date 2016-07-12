@@ -510,7 +510,6 @@ article a {
   display: none; }
 
 .box {
-
       padding: 8px;
       margin: 10px;
       width: 350px;
@@ -534,7 +533,7 @@ article a {
 .user {
         font-size: 12px;
         border-top: 1px solid #EAEAEA;
-            padding: 8px;
+            padding: 2px;
             margin: 0;
       }
 
