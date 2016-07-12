@@ -395,7 +395,7 @@ article a {
   height: 450px;
   right: 0; }
   #portfolio .portfolio-item .portfolio-link {
-    display: block;
+    
     position: relative;
     max-width: 300px;
     margin: 0 auto; }
