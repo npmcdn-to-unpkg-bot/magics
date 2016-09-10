@@ -114,7 +114,7 @@
 
 @stop
 @section('scripts')
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 
 <script>
 $('#pins').masonry({
